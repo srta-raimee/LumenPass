@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %} Atualização de infos {% endblock %}
+{% block content %}
+
+<div class="page-wrap">
+<div class="wrap3">  
+  <div class="leftcol">
+  <div class="panel">
+  	<div class="title">
+  		<h1>Atualização de infos dos dispositivos: </h1>
+        
+    </div>
+      <div class="panel">
+      
+      
+      <form action="/salvar_dispositivo_changes" method="POST">
+          <div class="contact-form mar-top30">
+            <label> <span>Nome do dispositivo:</span>
+              <input type="text" class="input_text" name="nome" id="nome"/>
+              </label>
+              <label> <span>ID:</span>
+                <input type="text" class="input_text" name="id" id="id"/>
+                </label>
+              <label> <span>Descrição: </span>
+              <input type="text" class="input_text" name="descricao" id="descricao"/>
+            
+              
+              <label>
+                <span>Status:</span>
+                <div id="caixaa">
+                  <div class="separar">
+                    <input type="checkbox" name="status" value=true checked />
+                    <h3>Ligado</h3>
+                  </div>
+                  <div class="separar">
+                    <input type="checkbox" name="status" value=false />
+                    <h3>Desligado</h3>
+                  </div>
+                </div>
+            <button type="submit" class="button">Enviar</button>
+          </div>
+        </form>
+        <div class="clearing"></div>
+      </div>
+  </div>	
+  </div>
+  
+    
+  <div class="clearing"></div>
+</div>    
+</div><!---page-wrap-End--->
+
+
+
+{% endblock %}
+{% block class11 %} class = 'active' {% endblock %}

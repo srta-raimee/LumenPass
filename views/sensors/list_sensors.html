@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %} Listagem {% endblock %}
+{% block content %}
+    
+  
+<div class="page-wrap">
+<div class="wrap3">  
+  <div class=" leftcol">
+  <div class="panel">
+  	<div class="title">
+  		<h1>Listagem </h1>
+        <span>Listagem de Sensores: </span>
+    </div>
+      <div class="panel">
+        <div>
+          {% for sensor in sensores %}
+          <tr>
+            <h3>Nome do Sensor: </h3>
+            <td>{{ sensor.nome }}</td>
+            <h3>Descrição: </h3>
+            <td>{{ sensor.descricao }}</td>
+            <h3>ID Sensor:</h3>
+            <td>{{ sensor.id }}</td>
+            <h3>Tipo: </h3>
+            <td>{{ sensor.tipo }}</td>
+            <h3>Limite de Proximidade: </h3>
+            <td>{{ sensor.limite_proximidade }}</td>
+          </br></br>
+          <div>
+            <td><a href="update_sensor/{{ sensor.id }}"> Editar</a></td>
+            <td><a href="delete_sensor/{{ sensor.id }}" onclick="return confirm('Tem certeza que deseja excluir esse sensor?');"> Excluir</a></td>
+
+          </div>
+          </br></br>
+          
+{% endfor %}
+        </div>
+    
+        </div>
+        <div class="clearing"></div>
+      </div>
+
+  </div>	
+  </div>
+  
+  
+    
+  <div class="clearing"></div>
+</div>    
+</div><!---page-wrap-End--->
+
+
+{% endblock %}
+{% block class6 %} class = 'active' {% endblock %}
+

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Cadastro {% endblock %}
+{% block content %}
+
+<div class="page-wrap">
+  <div class="wrap3">  
+    <div class="leftcol">
+      <div class="panel">
+        <div class="title">
+          <h1>Cadastro de informações dos Dispositivos:</h1>
+        </div>
+        <div class="panel">
+          <form action="dispositivos/registrar_dispositivo" method="POST">
+            <div class="contact-form mar-top30">
+              <label>
+                <span>Nome do Dispositivo:</span>
+                <input type="text" class="input_text" name="nome" id="nome"/>
+              </label>
+              <label>
+                <span>Descrição:</span>
+                <input type="text" class="input_text" name="descricao" id="descricao"/>
+              </label>
+              <label>
+                <span>Status:</span>
+                <select name="oi" class="input_text">
+                  <option name="ligado" value="ligado">Ligado</option>
+                  <option name ="desligado "value="desligado">Desligado</option>
+                </select>
+              </label>
+              <button type="submit" class="button">Enviar</button>
+            </div>
+          </form>
+          <div class="clearing"></div>
+        </div>
+      </div>	
+    </div>
+    <div class="clearing"></div>
+  </div>    
+</div><!---page-wrap-End--->
+
+{% endblock %}
+{% block class10 %} class='active' {% endblock %}
